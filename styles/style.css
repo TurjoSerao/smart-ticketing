@@ -83,7 +83,7 @@
 .hero {
   width: min(80%, 1400px);
   height: 550px;
-  background-image: url(/images/hero-banner.png);
+  background-image: url(../images/hero-banner.png);
   background-size: cover;
   background-position: center;
   margin: 20px auto;
@@ -277,7 +277,7 @@
 }
 
 .head img {
-  width: 50px;
+  /* width: 40px; */
 }
 
 .destination-head h4 {
@@ -289,7 +289,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  padding: 5px 10px;
+  padding: 0px 5px;
   background-color: #1cd10028;
   border: 1px solid #1dd100;
   border-radius: 5px;
@@ -308,11 +308,69 @@
   font-size: 32px;
 }
 .destination-right img {
-  width: 30%;
+  width: 50px;
 }
 .destination-right p {
   font-size: 16px;
   color: lightgray;
+}
+
+/* destination body */
+.destination-body {
+  background-color: #f7f8f8;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.destination-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.destination-content h3 {
+  font-family: "raleway", sans-serif;
+  font-size: 30px;
+  padding: 10px 10px;
+}
+
+.destination-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 30px;
+}
+
+.destination-footer div {
+  background-color: #eaebec;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 16px;
+}
+
+hr {
+  border: none;
+  border-top: 1px dotted #333;
+  color: #fff;
+  background-color: #fff;
+  height: 1px;
+  
+}
+
+/* seats Plans  */
+.seat-plan {
+  width: min(80%, 1400px);
+  margin: auto;
+  background-color: white;
+  display: flex;
+}
+
+.seat-left {
+  width: 60%;
+}
+
+.seat-right {
+  width: 40%;
 }
 
 /* Responsive design */

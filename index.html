@@ -1,44 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart Ticketing</title>
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
-    <!--  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <!--Navbar  -->
     <nav class="navbar">
-        <div class="navbar-container">
-            <div>
-                <a href="">E-Ticket</a>
-            </div>
-            <div>
-                <ul class="nav-menu">
-                    <li>
-                        <a href="">Home</a>
-                    </li>
-                    <li>
-                        <a href="">About</a>
-                    </li>
-                    <li>
-                        <a href="">Destination</a>
-                    </li>
-                    <li>
-                        <a href="">Search</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <button class="btn-green">Bus <img src="/images/bus-icon.png" alt=""></button>
-            </div>
+      <div class="navbar-container">
+        <div>
+          <a class="logo" href="">E-Ticket</a>
         </div>
+        <div>
+          <ul class="nav-menu" id="navLinks">
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">About</a>
+            </li>
+            <li>
+              <a href="">Destination</a>
+            </li>
+            <li>
+              <a href="">Search</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <button class="btn-green">
+            Bus <img src="/images/bus-icon.png" alt="" />
+          </button>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
     </nav>
 
-    
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h2>End-to-End Travel With <span>P Paribahan</span></h2>
+          <p>
+            Yes, you can run unit tests and view the results directly within the
+            app. The integrated testing features allow for a streamlined .
+          </p>
+          <button class="btn-primary">Buy Tickets</button>
+        </div>
+      </div>
+    </section>
+    <!-- floating cards  -->
+    <section class="hero-cards">
+      <!-- card 1 -->
+      <div class="card">
+        <img src="images/people.png" alt="" />
+        <div>
+          <h2>500K+</h2>
+          <p>Registered Users</p>
+        </div>
+      </div>
+      <!-- card 2 -->
+      <div class="card">
+        <img src="images/ticket-cupon.png" alt="" />
+        <div>
+          <h2>1.7 Lacks</h2>
+          <p>Tickets Sold</p>
+        </div>
+      </div>
+      <!-- card 3 -->
+      <div class="card">
+        <img src="images/stoppage.png" alt="" />
+        <div>
+          <h2>80K+</h2>
+          <p>Rental Partners</p>
+        </div>
+      </div>
+    </section>
 
     <!-- Js Script -->
-     <script src="scripts/ticket.js"></script>
-     <script src="scripts/uitility.js"></script>
-</body>
+    <script src="scripts/ticket.js"></script>
+    <script src="scripts/uitility.js"></script>
+  </body>
 </html>

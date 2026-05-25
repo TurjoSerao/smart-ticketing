@@ -277,7 +277,7 @@
 }
 
 .head img {
-  /* width: 40px; */
+  width: 40px;
 }
 
 .destination-head h4 {
@@ -351,10 +351,13 @@
 hr {
   border: none;
   border-top: 1px dotted #333;
-  color: #fff;
-  background-color: #fff;
+  color: #cacaca;
+  background-color: #c0c0c0;
   height: 1px;
-  
+}
+.vr {
+  border-left: 2px dotted black;
+  height: auto;
 }
 
 /* seats Plans  */
@@ -363,14 +366,146 @@ hr {
   margin: auto;
   background-color: white;
   display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 20px;
 }
 
 .seat-left {
   width: 60%;
 }
-
+.seat-left h5 {
+  font-size: 24px;
+  padding-bottom: 20px;
+}
 .seat-right {
   width: 40%;
+}
+.seat-right h5 {
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+.sets-icon,
+p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+.sets-icon img {
+  width: 20px;
+}
+
+.seats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20px;
+}
+.seats button {
+  margin-right: 20px;
+}
+.seat {
+  background-color: #f7f8f8;
+  border: none;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+}
+.seat-fare-content {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f7f8f8;
+  border-radius: 10px;
+}
+
+.seat-fare {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.total-price {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.coupons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 20px;
+}
+.coupons input {
+  border: none;
+  padding: 25px 0px;
+}
+.coupons input:focus {
+  outline: none;
+}
+.coupons button {
+  background-color: #1dd100;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+.grand-total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.form h3 {
+  color: #333;
+}
+
+.form input {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid rgb(206, 206, 206);
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.submit {
+  width: 100%;
+  padding: 20px;
+  background-color: #1dd100;
+  color: white;
+  font-size: 20px;
+  border: 1px solid rgb(206, 206, 206);
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+/* footer */
+footer {
+  background-color: #030712;
+  height: 400px;
+}
+.footer-container {
+  width: min(80%, 1400px);
+  padding: 60px 0;
+  margin: auto;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left h3 {
+  font-size: 40px;
+}
+.footer-right h4 {
+  font-size: 23px;
 }
 
 /* Responsive design */
@@ -429,5 +564,62 @@ hr {
   }
   .offers img {
     height: 150px;
+  }
+  .ticket-heading {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .ticket-heading h2 {
+    font-size: 28px;
+  }
+  .ticket-heading p {
+    font-size: 18px;
+  }
+  .destination {
+    width: min(90%, 100%);
+    flex-direction: column;
+  }
+  .destination-left {
+    width: 100%;
+    padding: 10px;
+  }
+  .destination-head {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+  .head {
+    width: 50px;
+    height: 50px;
+  }
+  .destination-head h4 {
+    font-size: 20px;
+  }
+  .custom-btn {
+    width: fit-content;
+  }
+  .destination-footer {
+    flex-direction: column;
+  }
+  .divider {
+    display: none;
+  }
+
+  /* seat-plan1 */
+  .seat-plan {
+    width: min(90%, 100%);
+    flex-direction: column;
+  }
+  .seat-left {
+    width: 100%;
+  }
+  .seat-right {
+    width: 100%;
+  }
+  .seat {
+    width: 60px;
+  }
+  .vr {
+    display: hidden;
   }
 }

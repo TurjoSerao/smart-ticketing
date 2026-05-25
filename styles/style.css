@@ -18,7 +18,7 @@
 
 /* navbar */
 .navbar {
-  width: min(80%, 1400px);
+  width: min(70%, 1400px);
   margin: auto;
   margin-top: 20px;
   position: relative;
@@ -81,7 +81,7 @@
 
 /* Hero Section */
 .hero {
-  width: min(80%, 1400px);
+  width: min(70%, 1400px);
   height: 550px;
   background-image: url(../images/hero-banner.png);
   background-size: cover;
@@ -140,7 +140,7 @@
 }
 
 .hero-cards {
-  width: min(80%, 1400px);
+  width: min(70%, 1400px);
   margin: -70px auto 0;
   position: relative;
   display: flex;
@@ -169,7 +169,7 @@
 
 /* Offer Section */
 .offers-container {
-  width: min(80%, 1400px);
+  width: min(70%, 1400px);
   margin: 80px auto;
 }
 
@@ -251,7 +251,7 @@
 /* destination */
 
 .destination {
-  width: min(80%, 1400px);
+  width: min(70%, 1400px);
   margin: 80px auto;
   background-color: white;
   border-radius: 15px;
@@ -362,7 +362,7 @@ hr {
 
 /* seats Plans  */
 .seat-plan {
-  width: min(80%, 1400px);
+  width: min(70%, 1400px);
   margin: auto;
   background-color: white;
   display: flex;
@@ -431,27 +431,28 @@ p {
   justify-content: space-between;
   padding: 10px 0;
 }
-.coupons {
+.coupons-input {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: white;
   margin-bottom: 20px;
 }
-.coupons input {
+.coupons-input input {
   border: none;
   padding: 25px 0px;
 }
-.coupons input:focus {
+.coupons-input input:focus {
   outline: none;
 }
-.coupons button {
+.coupons-input button {
   background-color: #1dd100;
   color: white;
   font-size: 18px;
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .grand-total {
@@ -492,7 +493,7 @@ footer {
   height: 400px;
 }
 .footer-container {
-  width: min(80%, 1400px);
+  width: min(70%, 1400px);
   padding: 60px 0;
   margin: auto;
   color: white;
@@ -506,6 +507,10 @@ footer {
 }
 .footer-right h4 {
   font-size: 23px;
+}
+
+.background-green {
+  background-color: #1dd100;
 }
 
 /* Responsive design */

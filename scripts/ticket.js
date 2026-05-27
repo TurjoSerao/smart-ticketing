@@ -6,22 +6,42 @@ menuToggle.addEventListener("click", function () {
   navLinks.classList.toggle("active");
 });
 
+let couponUsed = false;
 let count = 0;
+let seatPrice = 550;
+let remainingSeat = 40;
 
 function selectSets(elementId) {
   const element = document.getElementById(elementId);
 
-  // selected seat counter element
   const updateSeat = document.getElementById("selectedSets");
 
-  // if already selected
+  const remainingSeatElement = document.getElementById("remainingSeats");
+
+  const totalPriceElement = document.getElementById("totalPrice");
+
+  const selectedSeatContainer = document.getElementById(
+    "selectedSeatContainer",
+  );
+
+  // already selected
   if (element.classList.contains("background-green")) {
     element.classList.remove("background-green");
+
     count--;
+    remainingSeat++;
 
-    // update UI
     updateSeat.innerText = count;
+    remainingSeatElement.innerText = remainingSeat;
 
+    // remove seat row
+    const removeSeat = document.getElementById(elementId + "-seat");
+
+    removeSeat.remove();
+
+    // update price
+    totalPriceElement.innerText = count * seatPrice;
+    document.getElementById("grandTotal").innerText = count * seatPrice;
     return;
   }
 
@@ -35,7 +55,30 @@ function selectSets(elementId) {
   changeBgById(elementId);
 
   count++;
+  remainingSeat--;
 
-  // update UI
   updateSeat.innerText = count;
+  remainingSeatElement.innerText = remainingSeat;
+
+  // add selected seat info
+  const div = document.createElement("div");
+
+  div.id = elementId + "-seat";
+
+  div.style.display = "flex";
+  div.style.justifyContent = "space-between";
+  div.style.padding = "10px 0";
+
+  div.innerHTML = `
+      <span>${elementId.toUpperCase()}</span>
+      <span>Economy</span>
+      <span>${seatPrice}</span>
+  `;
+
+  selectedSeatContainer.appendChild(div);
+
+  // total price
+  totalPriceElement.innerText = count * seatPrice;
+  document.getElementById("grandTotal").innerText = count * seatPrice;
 }
+

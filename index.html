@@ -112,12 +112,12 @@
         </div>
         <div class="coupons right">
           <div>
-            <h3>15% OFF</h3>
+            <h3>20% OFF</h3>
             <p>On Your next purchase</p>
           </div>
           <img src="images/cupon-devider.png" alt="" />
           <div>
-            <h4>NEW15</h4>
+            <h4>Couple 20</h4>
             <p>Coupon Code</p>
           </div>
         </div>
@@ -151,7 +151,7 @@
             <!-- seats Lefts content -->
             <div class="custom-btn">
               <img src="images/seat-green.png" alt="" />
-              40 Seats Left
+              <span id="remainingSeats">40</span> Seats Left
             </div>
           </div>
           <!-- destination Body -->
@@ -398,8 +398,10 @@
             <div class="seat-fare">
               <div>
                 Seat
-                <span id="selectedSets"
-                  style="color: #1dd100; font-weight: bolder;">0</span
+                <span
+                  id="selectedSets"
+                  style="color: #1dd100; font-weight: bolder"
+                  >0</span
                 >
               </div>
               <div>Class</div>
@@ -407,30 +409,25 @@
             </div>
             <hr />
             <!-- selected sets class and fees -->
-            <div
-              style="
-                display: flex;
-                justify-content: space-between;
-                padding: 10px 0;
-              "
-            >
-              <span>C2</span>
-              <span>Economy </span>
-              <span>Price</span>
-            </div>
+            <div id="selectedSeatContainer"></div>
             <hr />
             <div class="total-price">
               <h3>Total Price</h3>
-              <h3>BDT <span>550</span></h3>
+              <h3>BDT <span id="totalPrice">0</span></h3>
             </div>
             <!-- coupon Input -->
             <div class="coupons-input">
-              <input type="text" placeholder="Have any Coupons" />
-              <button disabled>Apply</button>
+              <input
+                id="couponInput"
+                type="text"
+                placeholder="Have any Coupons"
+              />
+
+              <button id="applyBtn" onclick="applyCoupon()">Apply</button>
             </div>
             <div class="grand-total">
               <h3>Grand Total</h3>
-              <h3>BDT <span>550</span></h3>
+              <h3>BDT <span id="grandTotal">0</span></h3>
             </div>
           </div>
           <!-- Passenger Form -->

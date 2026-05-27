@@ -82,3 +82,44 @@ function selectSets(elementId) {
   document.getElementById("grandTotal").innerText = count * seatPrice;
 }
 
+// coupon function
+
+function applyCoupon() {
+  // already used
+  if (couponUsed) {
+    alert("Coupon already used");
+    return;
+  }
+
+  const couponInput = document.getElementById("couponInput");
+
+  const couponCode = couponInput.value.trim();
+
+  const totalPrice = count * seatPrice;
+
+  const grandTotalElement = document.getElementById("grandTotal");
+
+  let discount = 0;
+
+  // coupon conditions
+  if (couponCode === "NEW15") {
+    discount = totalPrice * 0.15;
+  } else if (couponCode === "Couple20") {
+    discount = totalPrice * 0.2;
+  } else {
+    alert("Invalid Coupon");
+    return;
+  }
+
+  // final price
+  const finalPrice = totalPrice - discount;
+
+  grandTotalElement.innerText = finalPrice;
+
+  couponUsed = true;
+
+  // disable button
+  document.getElementById("applyBtn").disabled = true;
+
+  alert("Coupon Applied Successfully");
+}

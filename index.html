@@ -117,7 +117,7 @@
           </div>
           <img src="images/cupon-devider.png" alt="" />
           <div>
-            <h4>Couple 20</h4>
+            <h4>Couple20</h4>
             <p>Coupon Code</p>
           </div>
         </div>
@@ -449,8 +449,27 @@
               placeholder="Enter your email id"
             />
           </div>
-          <input class="submit" type="submit" value="Next" />
+          <input onclick="openModal()" id="nextBtn" class="submit" type="submit" value="Next" />
         </div>
+      </div>
+    </section>
+
+    <!-- modal  -->
+    <!-- Modal -->
+    <section id="bookingModal" class="modal-container">
+      <div class="modal">
+        <img src="images/success.png" alt="" />
+
+        <h3>Success</h3>
+
+        <p>
+          Thank you for Booking Our Bus Seats. We are working hard to find the
+          best service and deals for you.
+        </p>
+
+        <p>Shortly you will find a confirmation in your email.</p>
+
+        <button onclick="closeModal()" class="btn-primary">Close</button>
       </div>
     </section>
 
@@ -471,6 +490,7 @@
         </div>
       </div>
     </footer>
+    <!--  -->
 
     <!-- Js Script -->
     <script src="scripts/utility.js"></script>

@@ -123,3 +123,17 @@ function applyCoupon() {
 
   alert("Coupon Applied Successfully");
 }
+
+function openModal() {
+  // optional validation
+  if (count === 0) {
+    alert("Please select at least one seat");
+    return;
+  }
+
+  document.getElementById("bookingModal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("bookingModal").style.display = "none";
+}
